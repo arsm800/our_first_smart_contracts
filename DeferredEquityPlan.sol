@@ -7,13 +7,14 @@ contract DeferredEquityPlan {
     address payable employee; // bob
     bool active = true; // this employee is active at the start of the contract
 
-    // @TODO: Set the total shares and annual distribution
-    // Your code here!
+    // Set the total shares and annual distribution
+    uint total_shares = 1000;
+    uint annual_distribution = 250;
 
     uint start_time = now; // permanently store the time this contract was initialized
 
-    // @TODO: Set the `unlock_time` to be 365 days from now
-    // Your code here!
+    // Set the `unlock_time` to be 365 days from now
+    uint unlock_time = now + 365 days;
 
     uint public distributed_shares; // starts at 0
 
