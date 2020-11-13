@@ -1,7 +1,13 @@
 pragma solidity ^0.5.0;
 
+//Import SafeMath
+import "github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol";
+
 // lvl 2: tiered split
 contract TieredProfitSplitter {
+    
+    using SafeMath for uint;
+    
     address payable employee_one; // ceo
     address payable employee_two; // cto
     address payable employee_three; // bob
@@ -22,15 +28,24 @@ contract TieredProfitSplitter {
         uint total;
         uint amount;
 
-        // @TODO: Calculate and transfer the distribution percentage
-        // Step 1: Set amount to equal `points` * the number of percentage points for this employee
-        // Step 2: Add the `amount` to `total` to keep a running total
-        // Step 3: Transfer the `amount` to the employee
+        //Calculate and transfer the distribution percentage
+        //Set amount to equal `points` * the number of percentage points for this employee
+        amount = points * 15;
+        
+        //Add the `amount` to `total` to keep a running total
+        total = total.add(amount);
+        
+        //Transfer the `amount` to the employee
+        employee_three.transfer(amount);
 
-        // @TODO: Repeat the previous steps for `employee_two` and `employee_three`
-        // Your code here!
-
-        employee_one.transfer(msg.value - total); // ceo gets the remaining wei
+        //Repeat the previous steps for `employee_two`
+        amount = points * 25;
+        total = total.add(amount);
+        
+        employee_two.transfer(amount);
+        
+        //Transfer remaining balance to CE) (employee_one)
+        employee_one.transfer(msg.value - total);
     }
 
     function() external payable {
