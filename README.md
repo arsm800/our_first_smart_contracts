@@ -17,6 +17,8 @@ You can see the results of this contract in Ganache addresses 4-6.  1 ETH was tr
 
 ![result_split_tier](images/Tiered_deposits_Ganache.png)
 
+* Deployed to Ropsten network at 0x68B94bb24Ee4530898EcdE58bCb3a350A385E0d1 address.
+
 ## Level 3: Deferred Equity Contributions
 
 This contract (DeferredEquityPlan.sol) takes a given amount of shares of the company and distributes them to an employee at a specified time interval.  In this contract, an employee is awarded 1000 shares upon starting at the company, but receives them in 250 share installments paid out after 1 year of services.  So after working for 1 year, they receive 250 shares.  After 2 years, another 250 shares.  This process continues through 4 years--where the full 1000 shares have been distributed, or the employee leaves.  This contract utilizes a timelock so that based on the values of now and an 'unlock_time variable, distribution function will run.
@@ -30,4 +32,4 @@ Hitting 'fastforward' will increase 'fakenow' by 100 days.  Once you fast forwar
 ![result_split](images/distribution_confirmation.png)
 
 
-*Deployed to Ropsten network at 0x55c0FFDaeb1949Ed0Ecd14763520322912115082 address
+* Deployed to Ropsten network at 0x55c0FFDaeb1949Ed0Ecd14763520322912115082 address.
