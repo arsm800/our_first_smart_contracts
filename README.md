@@ -7,6 +7,7 @@ This contract (AssociateProfitSplitter.sol) will transfer 1/3 the amount submitt
 
 You can see the results of this contract in address indices 1-3. .8 ETH was transferred to the contract, and .27 ETH (rounded up) was added to their initial 100 ETH balances.
 
+![result_split](images/Deposit_0.8_Ether.png)
 
 ## Level 2: Splitting Profits By Tier
 
@@ -14,6 +15,7 @@ This contract (TieredProfitSplitter.sol) transfers amounts to 3 different employ
 
 You can see the results of this contract in Ganache addresses 4-6.  1 ETH was transferred to the contract, and .6 ETH was transferred to address 4, .25 ETH to address 5, and .15 ETH to address 6.
 
+![result_split_tier](images/Tiered_deposits_Ganache.png)
 
 ## Level 3: Deferred Equity Contributions
 
@@ -21,7 +23,8 @@ This contract (DeferredEquityPlan.sol) takes a given amount of shares of the com
 
 Once the contract is deployed, if you try to distribute shares, there will be an error because 1 year (365 days) has not elapsed.
 
-
+![result_split](images/distribution_error.png)
 
 Hitting 'fastforward' will increase 'fakenow' by 100 days.  Once you fast forward 4 times, 'unlock_time' will be less than 'fakenow', the distribution will commence.  Check 'distributed_shares' to confirm.
 
+![result_split](images/distribution_confirmation.png)
