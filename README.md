@@ -7,7 +7,7 @@ This contract (AssociateProfitSplitter.sol) will transfer 1/3 the amount submitt
 
 You can see the results of this contract in address indices 1-3. .8 ETH was transferred to the contract, and .27 ETH (rounded up) was added to their initial 100 ETH balances.
 
-![result_split](images/Deposit_0.8_Ether.png)
+![result_split](images/Deposit_0.8_Ether_2.png)
 
 ## Level 2: Splitting Profits By Tier
 
