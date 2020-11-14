@@ -9,6 +9,8 @@ You can see the results of this contract in address indices 1-3. .8 ETH was tran
 
 ![result_split](images/Deposit_0.8_Ether_2.png)
 
+* Deployed to Ropsten network at 0xB9A30dEd76cB17b635809bCc2E652439d1f12238 address.
+
 ## Level 2: Splitting Profits By Tier
 
 This contract (TieredProfitSplitter.sol) transfers amounts to 3 different employees like AssociateProfitSplitter.sol does, but not in equal amounts.  Instead, percentages are assigned to each employee and the amounts are transferred are based on those set percentages.  This contract allows for employees or receipeints to be grouped into specific tiers.
