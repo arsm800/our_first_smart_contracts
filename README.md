@@ -28,3 +28,6 @@ Once the contract is deployed, if you try to distribute shares, there will be an
 Hitting 'fastforward' will increase 'fakenow' by 100 days.  Once you fast forward 4 times, 'unlock_time' will be less than 'fakenow', the distribution will commence.  Check 'distributed_shares' to confirm.
 
 ![result_split](images/distribution_confirmation.png)
+
+
+*Deployed to Ropsten network at 0x55c0FFDaeb1949Ed0Ecd14763520322912115082 address
